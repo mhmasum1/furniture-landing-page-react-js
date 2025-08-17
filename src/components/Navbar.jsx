@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { FaBagShopping } from "react-icons/fa6";
+import { FaBars } from "react-icons/fa6";
+import { FaTimes } from "react-icons/fa";
 
 // array of objects
 const navItems = [
@@ -10,12 +12,12 @@ const navItems = [
     { path: '/contact', label: 'Contact' },
 ]
 
-const Navitems = () => {
+const Navitems = ({ toggleMenu }) => {
     return (
         <ul className='flex flex-col md:flex-row items-center md:space-x-8 gap-8 '>
             {
                 navItems.map((item, index) => (
-                    <li key={index}>
+                    <li key={index} onClick={toggleMenu}>
 
                         <NavLink
                             to={item.path}
@@ -33,15 +35,37 @@ const Navitems = () => {
 }
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => {
+        setIsMenuOpen(prevState => !prevState)
+    }
+
     return (
         <header>
             <nav className=' max-w-screen-2xl container mx-auto flex justify-between  items-center py-6 px-4' >
                 {/* logo */}
                 <Link to='/' className='font-bold'>Logo</Link>
 
+
+                {/* hamburger menu for mobile */}
+
+                <div onClick={toggleMenu} className='md:hidden text-xl cursor-pointer hover:text-primary'>
+                    {
+                        isMenuOpen ? null : <FaBars />
+                    }
+                </div>
+
                 {/* desktops menu items */}
                 <div className='hidden md:flex '>
                     <Navitems></Navitems>
+                </div>
+
+                {/* mobile menu items */}
+                <div className={`fixed top-0 left-0 w-full h-screen bg-black bg-opacity-80 flex flex-col items-center justify-center space-y-8 text-white transition-transform transform ${isMenuOpen ? '-translate-x-0' : 'translate-x-full'} md:hidden`} >
+                    <div className=' absolute top-4 right-5 text-xl cursor-pointer' onClick={toggleMenu}>
+                        <FaTimes />
+                    </div>
+                    <Navitems toggleMenu={toggleMenu}></Navitems>
                 </div>
 
                 {/* cart icon */}
