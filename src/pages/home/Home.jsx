@@ -1,9 +1,15 @@
 import React from 'react'
 import Hero from './Hero'
+import WhyChoosingUs from './WhyChoosingUs'
+
 
 const Home = () => {
     return (
-        <Hero></Hero>
+        <>
+            <Hero></Hero>
+            <WhyChoosingUs></WhyChoosingUs>
+
+        </>
     )
 }
 

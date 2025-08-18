@@ -36,6 +36,7 @@ const Navitems = ({ toggleMenu }) => {
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const toggleMenu = () => {
         setIsMenuOpen(prevState => !prevState)
     }
