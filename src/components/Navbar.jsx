@@ -61,7 +61,7 @@ const Navbar = () => {
         <header className={`fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out ${isScorolled ? "bg-white shadow-md" : "bg-transparent text-white"}`}>
             <nav className=' max-w-screen-2xl container mx-auto flex justify-between  items-center py-6 px-4' >
                 {/* logo */}
-                <Link to='/' className='font-bold'>Logo</Link>
+                <Link to='/' className='font-bold'>Ammar</Link>
 
 
                 {/* hamburger menu for mobile */}
