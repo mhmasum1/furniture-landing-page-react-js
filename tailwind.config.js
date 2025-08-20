@@ -10,7 +10,7 @@ export default {
       'colors': {
         'primary': '#E58411',
         'secondary-color': '#1E1E1E',
-        'secondsry-bg': '#F7F7F7'
+        'secondary-bg': '#F7F7F7'
       },
       fontFamily: {
         'primary': ["Poppins", 'sans-serif']
