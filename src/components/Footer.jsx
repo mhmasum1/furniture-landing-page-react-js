@@ -15,7 +15,7 @@ const Footer = () => {
 
                 {/* Services */}
                 <div>
-                    <h2 className='text-xl font-semibold mb-4'>Services</h2>
+                    <h2 className='text-xl font-semibold mb-4 text-primary '>Services</h2>
                     <ul>
                         <li>
                             <Link to="/" className='hover:text-primary '>Email Marketing</Link>
@@ -29,7 +29,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h2 className='text-xl font-semibold mb-4'>Furniture</h2>
+                    <h2 className='text-xl font-semibold mb-4 text-primary '>Furniture</h2>
                     <ul>
                         <li>
                             <Link to="/" className='hover:text-primary '>Beds</Link>
@@ -43,7 +43,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h2 className='text-xl font-semibold mb-4'>Follow Us</h2>
+                    <h2 className='text-xl font-semibold mb-4 text-primary '>Follow Us</h2>
                     <ul>
                         <li>
                             <Link to="/" className='hover:text-primary flex items-center gap-2 '>
