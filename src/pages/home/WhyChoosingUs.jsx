@@ -5,7 +5,7 @@ const WhyChoosingUs = () => {
     return (
 
         <section className=' max-w-screen-2xl container mx-auto '>
-            <div className='my-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center gap-8 md:gap-12 text-left '>
+            <div className='my-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center gap-8 md:gap-12 text-left px-5 '>
 
                 <div >
                     <h2 className='font-bold text-4xl'>Why <br />

@@ -62,9 +62,9 @@ const Footer = () => {
 
             </div>
             {/* copyright */}
-            <div className='mt-12 max-w-screen-2xl container mx-auto flex flex-col sm:flex-row sm:justify-between sm:items-center sm:text-center gap-4 text-left text-black dark:bg-gray-800 dark:text-white border-t border-gray-300 pt-4 '>
+            <div className='mt-12 max-w-screen-2xl container mx-auto flex flex-col sm:flex-row sm:justify-between sm:items-center sm:text-center gap-4 text-left text-black dark:bg-gray-800 dark:text-white border-t border-gray-300 pt-4 px-5'>
                 <p> Copyright &copy; {new Date().getFullYear()} </p>
-                <div className='flex items-center gap-4'>
+                <div className='flex items-center gap-4 '>
                     <Link to="/">Terms & Conditions</Link>
                     <Link to="/">Privacy Policy</Link>
                 </div>

@@ -17,7 +17,12 @@ const Navitems = ({ toggleMenu }) => (
             <li key={index} onClick={toggleMenu}>
                 <NavLink
                     to={item.path}
-                    className={({ isActive }) => isActive ? "text-primary font-bold" : "hover:text-primary"}
+                    className={({ isActive }) =>
+                        isActive
+                            ? "text-primary font-bold text-lg md:text-xl"
+                            : "hover:text-primary text-lg md:text-xl"
+                    }
+
                 >
                     {item.label}
                 </NavLink>
@@ -42,9 +47,9 @@ const Navbar = () => {
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out ${isScrolled ? "bg-white shadow-md" : "bg-transparent text-white"}`}>
             <nav className='max-w-screen-2xl container mx-auto flex justify-between items-center py-6 px-4'>
-                <Link to='/' className='font-bold'>Ammar</Link>
+                <Link to='/' className='font-bold text-2xl hover:text-primary'>My HomeDecor</Link>
 
-                <div onClick={toggleMenu} className='md:hidden text-xl cursor-pointer hover:text-primary'>
+                <div onClick={toggleMenu} className='md:hidden text-xl cursor-pointer text-white hover:text-primary z-50'>
                     {isMenuOpen ? <FaTimes /> : <FaBars />}
                 </div>
 

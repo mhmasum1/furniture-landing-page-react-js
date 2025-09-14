@@ -4,7 +4,7 @@ import Button from '../../components/Button'
 
 const Experiences = () => {
     return (
-        <section className='max-w-screen-2xl container mx-auto my-24 flex flex-col md:flex-row items-center justify-between md:gap-20 gap-8 '>
+        <section className='max-w-screen-2xl container mx-auto my-24 flex flex-col md:flex-row items-center justify-between md:gap-20 gap-8 px-5'>
             <div className=' md:w-1/2 md:h-[541px]'>
                 <img className='h-full w-full' src={experienceImg} alt="" />
             </div>
